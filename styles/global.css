@@ -1,0 +1,108 @@
+/*aqui ficam as configurações que se repetem em todas as páginas no nosso site*/
+
+/*criando um reset das configurações default do navegador*/
+*{
+    margin:0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+/* criando um objeto com variáveis das cores dentro do documento inteiro */
+html{
+    --black: #0D114F;
+    --white: #FAFAFA;
+    --red: #E83F5B;
+    --ligh-blue: #E0ECFF;
+    --blue: #3485FF;
+    --background: #FBFCFF;
+    --overlay: #040911;
+    --icons-details: #A5B0C1;
+
+    --grey-dark: #4D5E77;
+    --grey-blue: #A1B2CD;
+    --grey-light: #E5EAF1;
+
+    font-size: 6.25% /* (válido apenas para rem) redefinindo o padrão do navegador para 1px = 6.3% do default (regra de 3) */
+}
+
+
+/* configurações para a tag <body> */
+body{
+    height: 100vh; /* view heighting - tamanho da tela do usuário -VERTICAL */
+    width: 100vw; /* view widthing - tamanho da tela do usuário -HORIZONTAL */
+    background: var(--background);
+}
+
+
+/* o body não engloba o button, o input e o textarea, por isso eles estão separados */
+body, button, input, textarea{
+    font-size: clamp(14px, 16rem, 2vw); /* clamp é um intervado de tamanho (menor tamanho, tamanho padrão, tamanho máximo)*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* DIV de todo o conteúdo dentro de body */
+.content{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* para acessar uma class, use ".nome"; para acessar uma tag, use apenas o nome */
+.sr-only{
+    position: absolute; /* permite e a label se desconecte de todo o resto e seja superior a ele */
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin:-1px; /* é assim que ele fica "fora" da tela */
+    overflow: hidden; /* para não ter barra de rolagem */
+    clip: rect(0, 0, 0, 0); /* posicionar o texto o canto 0 da tela */
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/* INPUT E BOTÕES */
+input, button, .button{
+    height: 50rem;
+    border-radius: 8rem; 
+}
+
+button, .button{
+    font-family: 'poppins';
+    font-weight: 500;
+    line-height: 0; /*espaçamento entre linhas de texto*/
+
+    display: flex;
+    align-items: center; /* alinha na vertical */
+    justify-content: center; /* alinha na horizontal incluindo imagens */
+    background: var(--blue);
+    color: var(--white);
+
+    transition: filter 0.2s;
+
+    cursor: pointer
+}
+
+button:hover, .button:hover{
+    filter: brightness(1.2); /* cria um brilho clicável no botão */
+}
+ 
+
+/* imagem que acompanho o botão */
+button > img,
+.button > img{
+    margin-right: 10rem;
+    width: 20rem;
+}
+
+button.outlined,
+.button.outlined{
+    background: var(--white);
+    color: var(--blue);
+    border: 2rem solid var(--blue)
+}
+

@@ -1,0 +1,58 @@
+/** aqui editaremos a primeira página do site **/
+
+.content{
+    display: grid;
+    grid-template-columns: 60% 40%; /* criando quantas colunas forem necessárias, mas a soma tem que ser 100 */
+    grid-template-rows: 114rem 1fr; /* 1 fração representa 100% do espaço restante */
+
+    grid-template-areas:
+    'header heder'
+    'left right'
+}
+
+header{
+    grid-area: header;
+}
+
+#bg{
+    grid-area: left;
+    background: url('../assets/home-bg-img.svg') no-repeat top/contain; /* "no-repeat" para não repetir e "top/contain" para que a imagem se ajuste à div*/
+}
+
+main{
+    grid-area: right;
+
+    display: flex;
+    align-items: center;
+}
+
+main .container{
+    width: min (363rem 100%); /* "min" = preferencia para o valor minimo */
+}
+
+main h2{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(20px, 5vw, 28rem);
+    margin-bottom: 24rem;
+}
+
+
+input{
+    border: 2rem solid var(--grey-blue);
+    padding: 0 16rem;
+}
+
+input, button, .button{
+    width: 100%;
+    margin-bottom: 18rem;
+}
+
+.content header{
+    width: 80%;
+    margin:35rem auto;
+}
+
+.container header img{
+    width: 167rem;
+}

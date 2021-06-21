@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Criar sala - Rocket.Q</title>
+        <!-- View port -->
+        <meta charset="UTF-8"> <!-- padrão de caracteres para PT-BR -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- compatibilizando com o Explorer -->
+        <meta name="viweport" content="width=device-width, initial-scale=1.0"> <!-- determina que viweport (tela) = largura da tela do dispositivo (deve ser acessado no CSS em "vw")-->
+
+
+        <!-- importar CSS -->
+        <link rel="stylesheet" href="./styles/global.css"> 
+        <link rel="stylesheet" href="./styles/home.css"> 
+
+        <!-- importar FONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <div id="home" class="content">
+
+            <header>
+                <img src="./assets/logo.svg" alt="Rocket.Q logo"/> <!-- (boa prática) usamos barra para indicar fechamento da tag, já que ela não possui tag de fechamento -->
+            </header>
+            
+            <div id="bg"></div>
+
+            <main>
+                <!-- SEGUNDA COLUNA -->
+                <div class="container"> <!-- criado com ".container" -->
+    
+                    <!-- PRIMEIRA SEÇÃO -->
+                    <section>
+                        <h2>Entre como participante</h2>
+                        <form action=""> <!-- é criado um "form" sempre que o botão tem um input agregado a ele -->
+                            <label class="sr-only" for="room-id">Código da sala</label> <!-- sempre criar junto com o "input", questão de acessibilidade; "sr-only" deixa a label escondida (CSS) -->
+                            <input type="number" id="room-id" placeholder="Código da sala"/> <!-- input numero da sala; "ID" conecta a "label" ao "input" -->
+                            <button> <!-- botão para entrar na sala -->
+                                <img src="./assets/enter-room.svg" alt="Entrar na sala"/>
+                                Entrar na sala
+                            </button> 
+                        </form>
+                    </section>
+                    <!-- FIM DA PRIMEIRA SEÇÃO -->
+    
+                    <!-- INICIO SEPARADOR -->
+                    <div class="separator">
+                        <div></div> <!-- traço será feito no CSS -->
+                        <div>ou</div>
+                        <div></div> <!-- traço será feito no CSS -->   
+                    </div>
+                    <!-- FIM DO SEPARADOR -->
+    
+                    <!-- SEGUNDA SEÇÃO -->
+                    <section>
+                        <h2>Crie sua própria sala de forma fácil</h2>
+                        <a href="/create-room.html" class="button outlined">
+                            <img src="./assets/users.svg" alt="Criar sala"/>
+                            Criar sala
+                        </a>
+                    </section>
+                    <!-- FIM DA SEGUNDA SEÇÃO -->
+    
+                </div> 
+                <!-- FIM DA SEGUNDA COLUNA -->
+            </main>
+
+        </div>
+    </body>
+
+</html>

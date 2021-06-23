@@ -25,12 +25,14 @@ html{
     --grey-blue: #A1B2CD;
     --grey-light: #E5EAF1;
 
-    font-size: 6.25% /* (válido apenas para rem) redefinindo o padrão do navegador para 1px = 6.3% do default (regra de 3) */
+    font-size: 6.25% 
+    /* (válido apenas para rem) redefinindo o padrão do navegador para 1px = 6.3% do default (regra de 3) */
 }
 
 
 /* configurações para a tag <body> */
 body{
+    display: flex;
     height: 100vh; /* view heighting - tamanho da tela do usuário -VERTICAL */
     width: 100vw; /* view widthing - tamanho da tela do usuário -HORIZONTAL */
     background: var(--background);
@@ -93,7 +95,7 @@ button:hover, .button:hover{
  
 
 /* imagem que acompanho o botão */
-button > img,
+button > img, /* ">" pega a tag filha direta */
 .button > img{
     margin-right: 10rem;
     width: 20rem;

@@ -1,0 +1,94 @@
+.content{
+    max-width: 78%;
+}
+
+#room header{
+    width: 100%;
+
+    display: flex; /* permite que o conteúdo fique lado a lado, já que o padrão do HTML é que fique um embaixo do outro */
+    align-items: center;
+    justify-content: space-between;
+    margin:35rem auto; /* posição do logo */
+}
+
+#room header .buttons{
+    display: flex;
+}
+
+#room header .buttons .button:nth-child(1){
+    margin-right: 8rem;
+    padding: 13rem 16rem;
+}
+
+#room header .buttons .button:nth-child(1) img{
+    margin-left: 10rem;
+    width: 20rem;
+    height: 20rem;
+}
+
+#room header .buttons .button:nth-child(2){
+    padding: 13rem 32rem;
+}
+
+#room header .buttons .button:nth-child(2) img{
+    margin-right: 10rem;
+    width: 20rem;
+    height: 20rem;
+}
+
+/* QUESTION FORM */
+
+#question-form h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28rem;
+    color: var(--black);
+    font-weight: 700;
+    line-height: 42rem;
+
+    margin-bottom: 24rem;
+}
+
+#question-form form{
+    border: 2rem solid var(--grey-blue);
+    padding: 16rem;
+    border-radius: 0 8rem 8rem 8rem;
+
+    margin-bottom: 16rem;
+}
+
+#question-form form textarea{
+    resize: none; /* trava o textarea em uma tamanho único */
+    background: none;
+    width: 100%;
+    outline: none; /* retira a linha padrão (que aparece ao clicar) do textarea */
+}
+
+#question-form form textarea::placeholder{
+    color: var(--grey-blue);
+}
+
+#question-form form footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#question-form form footer > div{ /* (boa prática) ">" referencia a div filha de footer, sem pegar divs "netas" de footer */
+    display: flex;
+    align-items: center;
+    color: var(--icons-details);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14rem;
+}
+
+#question-form form footer > div img{
+    margin-right: 6rem;
+}
+
+#question-form form footer button{
+    height: auto;
+    padding: 8rem 24rem;
+    line-height: 24rem; /* caixa de texto */
+}
+

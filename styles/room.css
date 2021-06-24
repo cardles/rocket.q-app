@@ -1,14 +1,24 @@
-.content{
-    max-width: 78%;
+/* .content{
+    max-width: 1120rem, 78%);
+} */
+
+body {
+    overflow-x: hidden;
+}
+
+#room main{
+    /* max-width: 78%; */
+    /* margin: auto 160rem; */
+    margin-right: 11.12%;
+    margin-left: 11.12%;
+    margin-top: 57rem;
 }
 
 #room header{
-    width: 100%;
-
+    /* width: 100%; */
     display: flex; /* permite que o conteúdo fique lado a lado, já que o padrão do HTML é que fique um embaixo do outro */
-    align-items: center;
+    align-items: top;
     justify-content: space-between;
-    margin:35rem auto; /* posição do logo */
 }
 
 #room header .buttons{
@@ -58,7 +68,7 @@
 
 #question-form form textarea{
     resize: none; /* trava o textarea em uma tamanho único */
-    background: none;
+    background: transparent;
     width: 100%;
     outline: none; /* retira a linha padrão (que aparece ao clicar) do textarea */
 }
@@ -91,4 +101,72 @@
     padding: 8rem 24rem;
     line-height: 24rem; /* caixa de texto */
 }
+
+
+/* QUESTÕES */
+
+.question-wrapper{
+    background: var(--light-blue);
+    border-radius: 0 8rem 8rem 8rem;
+    padding: 24rem;
+
+    
+    margin-bottom: 8rem;
+}
+
+.question-wrapper .question-content{
+    display: flex;
+    align-items: flex-start; /*alinhado ao topo*/
+}
+
+.question-wrapper .question-content .user{
+    background: var(--blue);
+    clip-path: circle();
+    padding: 14rem;
+}
+
+.question-wrapper .question-content p{
+    margin-left: 16rem;
+    word-break: break-word; /* frases muito grandes não quebram o layout -> hifeinização */
+    display: flex;
+    align-items: center;
+    min-height: 55rem;
+
+}
+
+
+.question-wrapper .actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.question-wrapper .actions > a{
+    display: flex;
+    align-items: center;
+    color: var(--grey-dark);
+}
+
+.question-wrapper .actions > a + a{ /* "+" permite selecionar o irmão do primeiro "a" */
+    margin-left: 24rem;
+}
+
+.question-wrapper .actions > a > img{
+    margin-right: 8rem;
+}
+
+
+/* QUESTÕES LIDAS */
+
+.question-wrapper.read{
+    background: var(--grey-medium);
+}
+
+.question-wrapper.read .question-content .user{
+    background: var(--grey-blue);
+}
+
+
+
+
 

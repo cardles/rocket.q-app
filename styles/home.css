@@ -14,15 +14,6 @@ header{
     grid-area: header;
 }
 
-.content header{
-    width: 78%; /* tamanho da div */
-    margin:35rem auto; /* posição do logo */
-}
-
-.content header img{
-    width: 167rem;
-}
-
 
 #bg{
     grid-area: left;

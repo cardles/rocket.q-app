@@ -15,13 +15,14 @@ html{
     --black: #0D114F;
     --white: #FAFAFA;
     --red: #E83F5B;
-    --ligh-blue: #E0ECFF;
+    --light-blue: #E0ECFF;
     --blue: #3485FF;
     --background: #FBFCFF;
     --overlay: #040911;
     --icons-details: #A5B0C1;
 
     --grey-dark: #4D5E77;
+    --grey-medium: #eaecf2;
     --grey-blue: #A1B2CD;
     --grey-light: #E5EAF1;
 
@@ -50,6 +51,17 @@ body, button, input, textarea{
 .content{
     width: 100%;
     margin: 0 auto;
+}
+
+
+/* -----HEADER----- */
+.content header{
+    width: 78%; /* tamanho da div */
+    margin:2.43% 11.12%; /* posição do logo */
+}
+
+.content header img{
+    width: 167rem;
 }
 
 
@@ -108,3 +120,16 @@ button.outlined,
     border: 2rem solid var(--blue)
 }
 
+
+/* BOTÕES EXTRAS */
+button.red,
+.button.red{
+    background: var(--red);
+    color: var(--white);
+}
+
+button.grey,
+.button.grey{
+    background: var(--grey-light);
+    color: var(--grey-dark);
+}
